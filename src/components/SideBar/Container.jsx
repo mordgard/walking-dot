@@ -2,21 +2,30 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Component from "./Component";
-import { OPEN_SIDEBAR, CLOSE_SIDEBAR } from "./actions";
+import { openSidebar, closeSidebar } from "./actions";
 
-const Container = () => {
-  return <Component />;
+const Container = ({ isSideBarOpen, actions }) => {
+  const handleCloseSidebar = () => {
+    actions.closeSidebar();
+  };
+
+  return (
+    <Component
+      isSidebarOpen={isSideBarOpen}
+      handleCloseSidebar={handleCloseSidebar}
+    />
+  );
 };
 
 const mapStateToProps = state => ({
-  isSideBarOpen: state.isOpen
+  isSideBarOpen: state.sidebar.isOpen
 });
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      OPEN_SIDEBAR,
-      CLOSE_SIDEBAR
+      openSidebar,
+      closeSidebar
     },
     dispatch
   )

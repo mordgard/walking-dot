@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Component = () => {
+const Component = ({ handleOpenSidebar }) => {
   const classes = useStyles();
 
   return (
@@ -35,6 +35,7 @@ const Component = () => {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={handleOpenSidebar}
           >
             <MenuIcon />
           </IconButton>

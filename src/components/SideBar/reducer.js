@@ -9,12 +9,12 @@ export default (state = initialState, action) => {
     case OPEN_SIDEBAR:
       return {
         ...state,
-        isOpen: action.payload
+        isOpen: true
       };
     case CLOSE_SIDEBAR:
       return {
         ...state,
-        isOpen: action.payload
+        isOpen: false
       };
     default:
       return state;
