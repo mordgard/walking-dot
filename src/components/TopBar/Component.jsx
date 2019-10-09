@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
+import { ButtonGroup } from "../ButtonGroup";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +43,8 @@ const Component = ({ handleOpenSidebar }) => {
           <Typography className={classes.title} variant="h6" noWrap>
             Walking Dot
           </Typography>
+          <Box flexGrow={1}></Box>
+          <ButtonGroup />
         </Toolbar>
       </AppBar>
     </Box>
