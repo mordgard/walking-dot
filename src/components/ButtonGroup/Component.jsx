@@ -7,6 +7,7 @@ const Component = () => {
     <ButtonGroup
       variant="contained"
       color="default"
+      size="small"
       aria-label="large outlined default button group"
     >
       <Button>Start</Button>

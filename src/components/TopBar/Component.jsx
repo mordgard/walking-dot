@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("sm")]: {
       display: "block"
     }
+  },
+  counter: {
+    marginRight: theme.spacing(2)
   }
 }));
 
@@ -44,6 +47,7 @@ const Component = ({ handleOpenSidebar }) => {
             Walking Dot
           </Typography>
           <Box flexGrow={1}></Box>
+          <Typography className={classes.counter}>Steps: {0}</Typography>
           <ButtonGroup />
         </Toolbar>
       </AppBar>
