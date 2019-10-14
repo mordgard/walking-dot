@@ -1,4 +1,4 @@
-const pseudoRandomNumberGenerator = () => {
+const pseudoRandomNumberGenerator = (max=999) => {
   // Pseudo Random Number Generator
 };
 
