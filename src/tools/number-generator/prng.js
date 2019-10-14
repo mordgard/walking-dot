@@ -1,4 +1,4 @@
-const pseudoRandomNumberGenerator = (max=3) => {
+const pseudoRandomNumberGenerator = () => {
   // Pseudo Random Number Generator
   Math.round(math.random()*1000);
   

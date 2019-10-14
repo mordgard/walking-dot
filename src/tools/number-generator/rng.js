@@ -1,6 +1,6 @@
-const randomNumberGenerator = (max=999) => {
+const randomNumberGenerator = () => {
   // Random Number Generator
-  return (window.crypto.getRandomValues(new Uint8Array(1)));
+  return window.crypto.getRandomValues(new Uint8Array(1));
 };
 
 export default randomNumberGenerator;
