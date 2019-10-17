@@ -6,34 +6,19 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Switch from "@material-ui/core/Switch";
 
-const Component = () => {
-  const [state, setState] = React.useState({
-    gilad: true
-  });
-
-  const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.checked });
-  };
-
-  return (
-    <FormControl component="fieldset">
-      <FormLabel component="legend">PRND / RND</FormLabel>
-      <FormGroup>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={state.gilad}
-              onChange={handleChange("gilad")}
-              color="default"
-              value="gilad"
-            />
-          }
-          label={`${0} enabled`}
-        />
-      </FormGroup>
-      <FormHelperText>Random number generator switch</FormHelperText>
-    </FormControl>
-  );
-};
+const Component = ({ isChecked, handleChange }) => (
+  <FormControl component="fieldset">
+    <FormLabel component="legend">Generator Switcher</FormLabel>
+    <FormGroup>
+      <FormControlLabel
+        control={
+          <Switch checked={isChecked} onChange={handleChange} color="default" />
+        }
+        label={`${isChecked ? "RNG" : "PRNG"} Enabled`}
+      />
+    </FormGroup>
+    <FormHelperText>Pseudo / Random Number Generator</FormHelperText>
+  </FormControl>
+);
 
 export default Component;
