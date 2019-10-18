@@ -17,11 +17,7 @@ const marks = [
   }
 ];
 
-const valuetext = value => {
-  return `${value}/s`;
-};
-
-const Component = () => {
+const Component = ({ onChangeSpeed }) => {
   return (
     <>
       <Typography id="discrete-slider" gutterBottom>
@@ -29,7 +25,7 @@ const Component = () => {
       </Typography>
       <Slider
         defaultValue={100}
-        getAriaValueText={valuetext}
+        getAriaValueText={onChangeSpeed}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
         step={10}
