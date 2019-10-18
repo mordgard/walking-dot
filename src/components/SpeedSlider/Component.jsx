@@ -17,14 +17,14 @@ const marks = [
   }
 ];
 
-const Component = ({ onChangeSpeed }) => {
+const Component = ({ onChangeSpeed, speed }) => {
   return (
     <>
       <Typography id="discrete-slider" gutterBottom>
         Steps per second
       </Typography>
       <Slider
-        defaultValue={100}
+        defaultValue={speed}
         getAriaValueText={onChangeSpeed}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
